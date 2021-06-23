@@ -1,0 +1,6 @@
+ARG STGDIR=$(Build.StagingDirectory)
+FROM microsoft/aspnetcore:5.0-stretch
+WORKDIR /app
+EXPOSE 80
+COPY $STGDIR /app
+ENTRYPOINT ["dotnet", "ShoeStorePayments.dll"]
