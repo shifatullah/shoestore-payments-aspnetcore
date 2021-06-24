@@ -43,7 +43,7 @@ namespace ShoeStorePayments.Controllers
         [HttpPost]
         public async Task<ActionResult> Create()
         {
-            string connectionString = _configuration.GetConnectionString("Payments:Settings:ServiceBusConnectionString");
+            string connectionString = _configuration.GetValue<string>("Payments:Settings:ServiceBusConnectionString");
             string queueName = _configuration.GetValue<string>("Payments:Settings:OrdersQueueName");
 
             ServiceBusClient client = new ServiceBusClient(connectionString);
