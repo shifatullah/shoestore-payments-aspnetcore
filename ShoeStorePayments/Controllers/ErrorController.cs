@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace ShoeStorePayments.Controllers
 {
     [ApiController]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class ErrorController : ControllerBase
     {
         [Route("/error-local-development")]
